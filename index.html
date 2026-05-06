@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API de Comida</title>
+    <title>ChefVirtual - Recetas del Mundo</title>
     <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
 
+    <header class="cabecera">
+        <h1>🍳 ChefVirtual</h1>
+        <form id="formulario-busqueda" class="contenedor-busqueda">
+            <input type="text" id="entrada-busqueda" placeholder="Ej: Chicken, Pasta, Apple..." required>
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <div class="sugerencias">
+            <p>Sugerencias:</p>
+            <div id="botones-sugerencias">
+                <button onclick="buscarRecetas('Chicken')">Pollo</button>
+                <button onclick="buscarRecetas('Beef')">Carne</button>
+                <button onclick="buscarRecetas('Seafood')">Mariscos</button>
+                <button onclick="buscarRecetas('Dessert')">Postres</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenedor-principal">
+        <div id="mensaje-estado" class="oculto"></div>
+        <section id="rejilla-resultados" class="rejilla-recetas"></section>
+
+        <!-- Modal de Detalle -->
+        <div id="modal-detalle" class="modal oculto">
+            <div class="contenido-modal">
+                <button id="cerrar-modal" class="boton-cerrar">&times;</button>
+                <div id="cuerpo-detalle"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2024 Proyecto API Comida - Programación Web</p>
+    </footer>
+
     <script src="./main.js"></script>
-    
 </body>
 </html>
