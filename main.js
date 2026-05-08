@@ -1,4 +1,4 @@
-// Referencias al DOM
+// declaracion de constantes para elementos del DOM
 const formularioBusqueda = document.getElementById('formulario-busqueda');
 const entradaBusqueda = document.getElementById('entrada-busqueda');
 const rejillaResultados = document.getElementById('rejilla-resultados');
